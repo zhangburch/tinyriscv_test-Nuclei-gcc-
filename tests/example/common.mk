@@ -1,14 +1,25 @@
+RISCV_PATH := $(TOOLCHAIN_DIR)
 
-RISCV_PATH := $(TOOLCHAIN_DIR)/tools/gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-win64/
+RISCV_GCC     := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-gcc)
+RISCV_AS      := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-as)
+RISCV_GXX     := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-g++)
+RISCV_OBJDUMP := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-objdump)
+RISCV_GDB     := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-gdb)
+RISCV_AR      := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-ar)
+RISCV_OBJCOPY := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-objcopy)
+RISCV_READELF := $(abspath $(RISCV_PATH)/bin/riscv-nuclei-elf-readelf)
 
-RISCV_GCC     := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-gcc)
-RISCV_AS      := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-as)
-RISCV_GXX     := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-g++)
-RISCV_OBJDUMP := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-objdump)
-RISCV_GDB     := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-gdb)
-RISCV_AR      := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-ar)
-RISCV_OBJCOPY := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-objcopy)
-RISCV_READELF := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-readelf)
+
+#RISCV_PATH := $(TOOLCHAIN_DIR)/tools/gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-win64/
+
+#RISCV_GCC     := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-gcc)
+#RISCV_AS      := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-as)
+#RISCV_GXX     := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-g++)
+#RISCV_OBJDUMP := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-objdump)
+#RISCV_GDB     := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-gdb)
+#RISCV_AR      := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-ar)
+#RISCV_OBJCOPY := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-objcopy)
+#RISCV_READELF := $(abspath $(RISCV_PATH)/bin/riscv-none-embed-readelf)
 
 .PHONY: all
 all: $(TARGET)

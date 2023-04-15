@@ -17,5 +17,5 @@ C_SRCS := \
 
 
 COMMON_DIR = ..
-TOOLCHAIN_DIR = ../../..
+TOOLCHAIN_DIR = /home/burch/tools/nuclei-tools/gcc/
 include ../common.mk
